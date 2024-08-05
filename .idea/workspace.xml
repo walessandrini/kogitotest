@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb83dafc-e2aa-46a8-abae-23d2b97e0e2e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cisco/CorsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cisco/KogitoTestApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/TrafficViolation.dmn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test-process.bpmn2" afterDir="false" />
+    <list default="true" id="cb83dafc-e2aa-46a8-abae-23d2b97e0e2e" name="Changes" comment="Adding testing files">
+      <change afterPath="$PROJECT_DIR$/src/test/java/GreetingsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TrafficViolationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testscenario/KogitoScenarioJunitActivatorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/TrafficViolationTest.scesim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,12 +33,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.KogitoTestApplication.executor": "Run",
+    "Maven.KogitoTest [compile].executor": "Run",
     "Maven.KogitoTest [deploy].executor": "Run",
     "Maven.KogitoTest [install].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/walter.alessandrini/workspace-intellij/kogitoTest/src/main/resources",
+    "last_opened_file_path": "C:/Users/walter.alessandrini/workspace-intellij/kogitoTest/src/test",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
@@ -50,9 +47,13 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\walter.alessandrini\workspace-intellij\kogitoTest\src\test" />
+      <recent name="C:\Users\walter.alessandrini\workspace-intellij\kogitoTest\src\test\resources" />
+      <recent name="C:\Users\walter.alessandrini\workspace-intellij\kogitoTest\src\test\java" />
       <recent name="C:\Users\walter.alessandrini\workspace-intellij\kogitoTest\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\walter.alessandrini\workspace-intellij\kogitoTest\src\test\java" />
       <recent name="C:\Users\walter.alessandrini\workspace-intellij\kogitoTest\src\main\resources\META-INF" />
     </key>
   </component>
@@ -86,6 +87,10 @@
       <updated>1722861444021</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Adding testing files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding testing files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

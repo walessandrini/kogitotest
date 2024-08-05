@@ -37,6 +37,12 @@
             <version>${kogito.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.kie.kogito</groupId>
+            <artifactId>kogito-scenario-simulation</artifactId>
+            <version>${kogito.version}</version>
+            <scope>test</scope>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
