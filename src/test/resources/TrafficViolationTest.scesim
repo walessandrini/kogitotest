@@ -54,7 +54,7 @@
           <factAlias>Driver</factAlias>
           <expressionAlias>Points</expressionAlias>
           <genericTypes/>
-          <columnWidth>114</columnWidth>
+          <columnWidth>116.28571428571428</columnWidth>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
         </FactMapping>
         <FactMapping>
@@ -78,7 +78,7 @@
           <factAlias>Violation</factAlias>
           <expressionAlias>Type</expressionAlias>
           <genericTypes/>
-          <columnWidth>114</columnWidth>
+          <columnWidth>116.28571428571428</columnWidth>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
         </FactMapping>
         <FactMapping>
@@ -102,7 +102,7 @@
           <factAlias>Violation</factAlias>
           <expressionAlias>Speed Limit</expressionAlias>
           <genericTypes/>
-          <columnWidth>114</columnWidth>
+          <columnWidth>116.28571428571428</columnWidth>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
         </FactMapping>
         <FactMapping>
@@ -126,7 +126,7 @@
           <factAlias>Violation</factAlias>
           <expressionAlias>Actual Speed</expressionAlias>
           <genericTypes/>
-          <columnWidth>114</columnWidth>
+          <columnWidth>116.28571428571428</columnWidth>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
         </FactMapping>
         <FactMapping>
@@ -150,7 +150,7 @@
           <factAlias>Fine</factAlias>
           <expressionAlias>Amount</expressionAlias>
           <genericTypes/>
-          <columnWidth>114</columnWidth>
+          <columnWidth>116.28571428571428</columnWidth>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
         </FactMapping>
         <FactMapping>
@@ -174,7 +174,7 @@
           <factAlias>Fine</factAlias>
           <expressionAlias>Points</expressionAlias>
           <genericTypes/>
-          <columnWidth>114</columnWidth>
+          <columnWidth>116.28571428571428</columnWidth>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
         </FactMapping>
         <FactMapping>
@@ -195,7 +195,7 @@
           <factAlias>Should the driver be suspended?</factAlias>
           <expressionAlias>value</expressionAlias>
           <genericTypes/>
-          <columnWidth>114</columnWidth>
+          <columnWidth>116.28571428571428</columnWidth>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
         </FactMapping>
       </factMappings>
@@ -594,7 +594,7 @@
               <name>1|13</name>
               <type>EXPECT</type>
             </expressionIdentifier>
-            <rawValue class="string">"No"</rawValue>
+            <rawValue class="string">"Yes"</rawValue>
           </FactMappingValue>
           <FactMappingValue>
             <factIdentifier>
@@ -730,7 +730,7 @@
           <className>java.lang.Void</className>
           <factAlias>INSTANCE 1</factAlias>
           <expressionAlias>PROPERTY 1</expressionAlias>
-          <columnWidth>114</columnWidth>
+          <columnWidth>1041</columnWidth>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
         </FactMapping>
       </factMappings>
@@ -753,10 +753,10 @@
     </scesimData>
   </background>
   <settings>
-    <dmnFilePath>../../main/resources/Traffic Violation.dmn</dmnFilePath>
+    <dmnFilePath>../../main/resources/TrafficViolation.dmn</dmnFilePath>
     <type>DMN</type>
     <dmnNamespace>https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF</dmnNamespace>
-    <dmnName>Traffic Violation</dmnName>
+    <dmnName>TrafficViolation</dmnName>
     <skipFromBuild>false</skipFromBuild>
     <stateless>false</stateless>
   </settings>
