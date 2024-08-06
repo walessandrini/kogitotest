@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="http://example.com/dmn" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="definitions" name="SubscriberAddedDecision" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="http://example.com/dmn">
+  <dmn:extensionElements/>
+  <dmn:inputData id="SubscriberAddedEvent" name="SubscriberAddedEvent">
+    <dmn:extensionElements/>
+    <dmn:variable id="SubscriberAddedEventVar" name="SubscriberAddedEvent" typeRef="tSubscriberAddedEvent"/>
+  </dmn:inputData>
+  <dmn:inputData id="Destinations" name="Destinations">
+    <dmn:extensionElements/>
+    <dmn:variable id="DestinationsVar" name="Destinations" typeRef="tList"/>
+  </dmn:inputData>
+  <dmn:inputData id="NotificationPreferences" name="NotificationPreferences">
+    <dmn:extensionElements/>
+    <dmn:variable id="NotificationPreferencesVar" name="NotificationPreferences" typeRef="tNotificationPreferences"/>
+  </dmn:inputData>
+  <dmn:inputData id="CurrentTime" name="CurrentTime">
+    <dmn:extensionElements/>
+    <dmn:variable id="CurrentTimeVar" name="CurrentTime" typeRef="date"/>
+  </dmn:inputData>
+  <dmn:decision id="BrandCheck" name="BrandCheck">
+    <dmn:description>Obtiene el brandId y retorna si está contenido en una lista estática.</dmn:description>
+    <dmn:extensionElements/>
+    <dmn:variable id="isValidBrand" name="BrandCheck" typeRef="boolean"/>
+    <dmn:informationRequirement id="_5FFF4EA4-F19B-48A0-8F21-3BEC613E280A">
+      <dmn:requiredInput href="#SubscriberAddedEvent"/>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="BrandCheckTable" hitPolicy="ANY" preferredOrientation="Rule-as-Row">
+      <dmn:input id="brandId"/>
+      <dmn:output id="isValidBrandOutput"/>
+      <dmn:annotation name=""/>
+      <dmn:rule id="_062A8FB5-AF0D-4DBC-AB66-1398FD7547A6">
+        <dmn:inputEntry id="_18F249E4-6BDA-41AA-B82B-FD63A85E34EF"/>
+        <dmn:outputEntry id="_34D5EAD9-4CAC-4A79-B5B2-E15518176BE6">
+          <dmn:text/>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_8E6453D5-08E6-48D9-B207-37E1D02920C9">
+        <dmn:inputEntry id="_038E92B5-5D75-4314-B6C4-B4FD94668A67"/>
+        <dmn:outputEntry id="_29FA1128-B07E-4C48-B034-8DB550F02C23">
+          <dmn:text/>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+  <dmn:decision id="TTLCheck" name="TTLCheck">
+    <dmn:extensionElements/>
+    <dmn:variable id="isTTLValid" name="TTLCheck" typeRef="boolean"/>
+    <dmn:decisionTable id="TTLCheckTable" hitPolicy="ANY" preferredOrientation="Rule-as-Row">
+      <dmn:input id="timeToLive"/>
+      <dmn:input id="currentTime"/>
+      <dmn:output id="isTTLValidOutput"/>
+      <dmn:annotation name=""/>
+      <dmn:rule id="_E6EA48CC-6914-405D-9CB3-957771417823">
+        <dmn:inputEntry id="_BE9F71C7-F8FE-4780-AAFC-67F89F2C2D2A"/>
+        <dmn:inputEntry id="_C82BCC96-8156-4331-BBFA-1D6818AA102B"/>
+        <dmn:outputEntry id="_83B214C2-3B91-434C-81FA-C82537F7E3D7">
+          <dmn:text/>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+  <dmn:decision id="BuildHttpDestination" name="BuildHttpDestination">
+    <dmn:extensionElements/>
+    <dmn:variable id="HttpDestination" name="BuildHttpDestination" typeRef="tHttpDestination"/>
+    <dmn:decisionTable id="BuildHttpDestinationTable" hitPolicy="ANY" preferredOrientation="Rule-as-Row">
+      <dmn:input id="isValidBrand"/>
+      <dmn:input id="isTTLValid"/>
+      <dmn:input id="isFutureTTLValid"/>
+      <dmn:output id="HttpDestinationOutput"/>
+      <dmn:annotation name=""/>
+      <dmn:rule id="_123F957A-9D04-47FD-A455-11B1710EBB2A">
+        <dmn:inputEntry id="_B0CB4080-0EB5-4174-8AD3-B21DF03832A7"/>
+        <dmn:inputEntry id="_308ABB60-795F-4D22-8671-C6A42C5079A2"/>
+        <dmn:inputEntry id="_8BA19FEF-551E-4D57-9F6F-6A970DF9CAB6"/>
+        <dmn:outputEntry id="_2553F9A6-CEE6-44FB-9B50-02EAF93419DD">
+          <dmn:text/>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+  <dmn:decision id="BuildLogDestination" name="BuildLogDestination">
+    <dmn:extensionElements/>
+    <dmn:variable id="LogDestination" name="BuildLogDestination" typeRef="tLogDestination"/>
+    <dmn:decisionTable id="BuildLogDestinationTable" hitPolicy="ANY" preferredOrientation="Rule-as-Row">
+      <dmn:input id="isValidBrand"/>
+      <dmn:input id="isTTLValid"/>
+      <dmn:input id="isFutureTTLValid"/>
+      <dmn:output id="LogDestinationOutput"/>
+      <dmn:annotation name=""/>
+      <dmn:rule id="_E764AF0D-7053-4CFF-9808-A16D83443A0F">
+        <dmn:inputEntry id="_CD175A51-D2A8-498E-BF32-CF9BC73A4F7F"/>
+        <dmn:inputEntry id="_2A09327E-A028-455E-839F-BE8E8B34E748"/>
+        <dmn:inputEntry id="_A24F3FD7-EDAF-4AEF-A1DA-374BFC491CAF"/>
+        <dmn:outputEntry id="_C1A3E481-F999-43BB-9CF7-D1BB6BA8F9CF">
+          <dmn:text/>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_75F407CA-E096-4083-9C40-CFF79C356A5E" name="DRG">
+      <di:extension>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="BrandCheckTable"/>
+          <kie:ComponentWidths dmnElementRef="TTLCheckTable">
+            <kie:width>50</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="BuildHttpDestinationTable"/>
+          <kie:ComponentWidths dmnElementRef="BuildLogDestinationTable"/>
+        </kie:ComponentsWidthsExtension>
+      </di:extension>
+      <dmndi:DMNShape id="dmnshape-drg-SubscriberAddedEvent" dmnElementRef="SubscriberAddedEvent" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="214.59813084112147" y="287" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-Destinations" dmnElementRef="Destinations" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="828.2990654205607" y="287" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-NotificationPreferences" dmnElementRef="NotificationPreferences" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="655.2990654205607" y="286" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-CurrentTime" dmnElementRef="CurrentTime" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="415.5981308411215" y="286" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-BrandCheck" dmnElementRef="BrandCheck" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="240" y="168" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-TTLCheck" dmnElementRef="TTLCheck" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="420" y="163" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-BuildHttpDestination" dmnElementRef="BuildHttpDestination" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="184" y="50" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-BuildLogDestination" dmnElementRef="BuildLogDestination" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="730" y="57" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-drg-_5FFF4EA4-F19B-48A0-8F21-3BEC613E280A" dmnElementRef="_5FFF4EA4-F19B-48A0-8F21-3BEC613E280A">
+        <di:waypoint x="264.5981308411215" y="312"/>
+        <di:waypoint x="290" y="193"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>
