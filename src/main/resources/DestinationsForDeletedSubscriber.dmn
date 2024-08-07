@@ -134,17 +134,6 @@
           <dmn:text/>
         </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule id="_1C9FEE38-849A-43C7-87E8-EB15F5E19B0A">
-        <dmn:inputEntry id="_71CFE02E-A62E-4BF3-A9C4-49419B4FC563">
-          <dmn:text>&lt;other&gt;</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry id="_0980FEE9-FD7E-4ED7-86BA-893BD1BDEB80">
-          <dmn:text>false</dmn:text>
-        </dmn:outputEntry>
-        <dmn:annotationEntry>
-          <dmn:text/>
-        </dmn:annotationEntry>
-      </dmn:rule>
     </dmn:decisionTable>
   </dmn:decision>
   <dmndi:DMNDI>
