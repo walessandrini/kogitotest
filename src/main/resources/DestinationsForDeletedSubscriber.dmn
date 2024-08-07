@@ -28,19 +28,6 @@
       <dmn:typeRef>tSubscriber</dmn:typeRef>
     </dmn:itemComponent>
   </dmn:itemDefinition>
-  <dmn:itemDefinition id="_558F40CD-3A78-4D26-83CF-10B7B473FE51" name="tHttpDestination" isCollection="false">
-    <dmn:itemComponent id="_B14025E6-5F58-428F-AC9B-857B7FB57C39" name="target" isCollection="false">
-      <dmn:typeRef>string</dmn:typeRef>
-    </dmn:itemComponent>
-    <dmn:itemComponent id="_FBB9225A-EEBC-4186-B047-717DB4DBB3AB" name="metadata" isCollection="false">
-      <dmn:typeRef>context</dmn:typeRef>
-    </dmn:itemComponent>
-  </dmn:itemDefinition>
-  <dmn:itemDefinition id="_0555E520-AAE8-48B0-A20F-E532170BCFAA" name="tLogDestination" isCollection="false">
-    <dmn:itemComponent id="_3A96CEFB-9124-4365-808F-97C1CD6FA1E2" name="tag" isCollection="false">
-      <dmn:typeRef>context</dmn:typeRef>
-    </dmn:itemComponent>
-  </dmn:itemDefinition>
   <dmn:inputData id="_D79E7CC8-4B95-4238-99D3-BFA9A10D32E7" name="SubcriberAddedEvent">
     <dmn:extensionElements/>
     <dmn:variable id="_7D4C9BF2-A01D-4BF8-BDFA-48E04D74C6A2" name="SubcriberAddedEvent" typeRef="tSubscriberAdded"/>
