@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_xUNP0Df4ED2H_MvI-lfqxw" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_c5lJQTf5ED2s2daruRvFSA" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
   <bpmn2:itemDefinition id="_personItem" structureRef="com.cisco.model.demo.Person"/>
   <bpmn2:itemDefinition id="_UserTask_1_SkippableInputXItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="_UserTask_1_PriorityInputXItem" structureRef="Object"/>
@@ -20,10 +20,10 @@
   <bpmn2:itemDefinition id="_BusinessRuleTask_1_decisionInputXItem" structureRef="java.lang.String"/>
   <bpmn2:itemDefinition id="_BusinessRuleTask_1_personsInputXItem" structureRef="com.cisco.model.demo.Person"/>
   <bpmn2:itemDefinition id="_BusinessRuleTask_1_personsOutputXItem" structureRef="com.cisco.model.demo.Person"/>
-  <bpmn2:collaboration id="_9FD2A775-65CE-4EBD-B76E-22B15FF6177C" name="Default Collaboration">
-    <bpmn2:participant id="_BD176ACA-0911-4FEF-A4E4-386A5588C1AB" name="Pool Participant" processRef="persons"/>
+  <bpmn2:collaboration id="_3C0F022A-A473-48E9-8273-78B90DB42D36" name="Default Collaboration">
+    <bpmn2:participant id="_F659236A-7143-4443-BBB6-D492B1C44D83" name="Pool Participant" processRef="persons"/>
   </bpmn2:collaboration>
-  <bpmn2:process id="persons" drools:packageName="com.cisco" drools:version="1.0" drools:adHoc="false" name="Person Process" isExecutable="true" processType="Public">
+  <bpmn2:process id="persons" drools:packageName="com.cisco.demo" drools:version="1.0" drools:adHoc="false" name="Person Process" isExecutable="true" processType="Public">
     <bpmn2:property id="person" itemSubjectRef="_personItem" name="person"/>
     <bpmn2:sequenceFlow id="SequenceFlow_1" sourceRef="StartEvent_1" targetRef="BusinessRuleTask_1"/>
     <bpmn2:sequenceFlow id="SequenceFlow_2" sourceRef="BusinessRuleTask_1" targetRef="ExclusiveGateway_1"/>
@@ -124,8 +124,8 @@
           <bpmn2:to xsi:type="bpmn2:tFormalExpression"><![CDATA[UserTask_1_PriorityInputX]]></bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:potentialOwner id="_xUPsEDf4ED2H_MvI-lfqxw">
-        <bpmn2:resourceAssignmentExpression id="_xUPsETf4ED2H_MvI-lfqxw">
+      <bpmn2:potentialOwner id="_c5ozoDf5ED2s2daruRvFSA">
+        <bpmn2:resourceAssignmentExpression id="_c5ozoTf5ED2s2daruRvFSA">
           <bpmn2:formalExpression>admin</bpmn2:formalExpression>
         </bpmn2:resourceAssignmentExpression>
       </bpmn2:potentialOwner>
@@ -246,7 +246,7 @@
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_xUNP0Df4ED2H_MvI-lfqxw</bpmn2:source>
-    <bpmn2:target>_xUNP0Df4ED2H_MvI-lfqxw</bpmn2:target>
+    <bpmn2:source>_c5lJQTf5ED2s2daruRvFSA</bpmn2:source>
+    <bpmn2:target>_c5lJQTf5ED2s2daruRvFSA</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
