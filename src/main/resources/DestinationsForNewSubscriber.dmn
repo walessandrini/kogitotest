@@ -152,7 +152,7 @@
         </dmn:inputExpression>
       </dmn:input>
       <dmn:input id="_B1870C7D-FC7C-44DE-B812-483F6E166F2C">
-        <dmn:inputExpression typeRef="boolean">
+        <dmn:inputExpression id="_45612F4D-5A7D-4A9A-9D5E-20A8A1FF6AC7" typeRef="boolean">
           <dmn:text>FutureTTLCheck</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
@@ -498,7 +498,7 @@
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_DFAA0064-942E-45DC-9EBE-725157658DE0">
             <kie:width>50</kie:width>
-            <kie:width>289</kie:width>
+            <kie:width>477</kie:width>
             <kie:width>100</kie:width>
             <kie:width>100</kie:width>
           </kie:ComponentWidths>
