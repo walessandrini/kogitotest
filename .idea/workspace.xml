@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb83dafc-e2aa-46a8-abae-23d2b97e0e2e" name="Changes" comment="Adding testing files">
-      <change afterPath="$PROJECT_DIR$/src/test/java/GreetingsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TrafficViolationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testscenario/KogitoScenarioJunitActivatorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/TrafficViolationTest.scesim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/PersonValidationService.drl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/persons.bpmn2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DestinationsForNewSubscriberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DestinationsForNewSubscriberTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +18,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;walessandrini&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/walessandrini/kogitotest.git&quot;,
+    &quot;accountId&quot;: &quot;eb76a1aa-0dec-4c0e-add2-23310bb36086&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -33,13 +43,20 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.KogitoTestApplication.executor": "Run",
+    "JUnit.DestinationsForNewSubscriberTest.executor": "Run",
+    "JUnit.DestinationsForNewSubscriberTest.testDestinationsForNewSubscriber.executor": "Run",
+    "JUnit.GreetingsTest.executor": "Run",
+    "JUnit.KogitoScenarioJunitActivatorTest.executor": "Run",
+    "JUnit.TrafficViolationTest.executor": "Run",
+    "Maven.KogitoTest [clean].executor": "Run",
     "Maven.KogitoTest [compile].executor": "Run",
     "Maven.KogitoTest [deploy].executor": "Run",
     "Maven.KogitoTest [install].executor": "Run",
+    "Maven.KogitoTest [test].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/walter.alessandrini/workspace-intellij/kogitoTest/src/test",
+    "last_opened_file_path": "C:/Users/walter.alessandrini/workspace-intellij/kogitoTest",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
@@ -57,7 +74,7 @@
       <recent name="C:\Users\walter.alessandrini\workspace-intellij\kogitoTest\src\main\resources\META-INF" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.DestinationsForNewSubscriberTest">
     <configuration name="KogitoTestApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cisco.KogitoTestApplication" />
       <module name="KogitoTest" />
@@ -71,9 +88,56 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DestinationsForNewSubscriberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="KogitoTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DestinationsForNewSubscriberTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DestinationsForNewSubscriberTest.testDestinationsForNewSubscriber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="KogitoTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DestinationsForNewSubscriberTest" />
+      <option name="METHOD_NAME" value="testDestinationsForNewSubscriber" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KogitoScenarioJunitActivatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="KogitoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testscenario.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testscenario" />
+      <option name="MAIN_CLASS_NAME" value="testscenario.KogitoScenarioJunitActivatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrafficViolationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="KogitoTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TrafficViolationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DestinationsForNewSubscriberTest" />
         <item itemvalue="Application.KogitoTestApplication" />
+        <item itemvalue="JUnit.DestinationsForNewSubscriberTest.testDestinationsForNewSubscriber" />
+        <item itemvalue="JUnit.KogitoScenarioJunitActivatorTest" />
+        <item itemvalue="JUnit.TrafficViolationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -86,7 +150,27 @@
       <option name="presentableId" value="Default" />
       <updated>1722861444021</updated>
     </task>
+    <task id="LOCAL-00001" summary="Adding testing files">
+      <option name="closed" value="true" />
+      <created>1722885017495</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1722885017495</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adding testing files" />

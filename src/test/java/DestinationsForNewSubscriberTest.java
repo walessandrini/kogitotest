@@ -41,14 +41,14 @@ public class DestinationsForNewSubscriberTest {
         given()
                .body("{\n" +
                      "    \"CurrentDate\": \"2024-08-07\",\n" +
-                     "    \"SubcriberAddedEvent\": {\n" +
-                     "        \"createdOn\": 100,\n" +
+                     "    \"SubscriberAddedEvent\": {\n" +
+                     "        \"createdOn\": \"2024-08-07T13:52:56.437Z\",\n" +
                      "        \"newSubscriber\": {\n" +
                      "            \"brandId\": \"TF\",\n" +
                      "            \"mdn\": \"1234\",\n" +
                      "            \"baseOffer\": {\n" +
                      "                \"timeToLive\": \"2024-08-07\",\n" +
-                     "                \"futureTimeToLive\": \"2024-08-07\",\n" +
+                     "                \"futureTimeToLive\": \"2024-08-07\"\n" +
                      "             }\n" +
                      "         }\n" +
                      "    }\n" +
@@ -58,6 +58,6 @@ public class DestinationsForNewSubscriberTest {
                .post("/DestinationsForNewSubscriber")
           .then()
              .statusCode(200)
-               .body("'Should the driver be suspended?'", is("No"));
+               .body("'BrandCheck'", is(true));
     }
 }
