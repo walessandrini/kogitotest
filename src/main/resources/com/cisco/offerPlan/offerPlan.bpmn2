@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" xmlns:xsi="xsi" id="_kuW70Di3ED2Wk_7Rk8CoDQ" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+  <bpmn2:itemDefinition id="_subscriberDataItem" structureRef="com.cisco.model.planOffer.SubscriberData"/>
+  <bpmn2:itemDefinition id="_currentPlanItem" structureRef="com.cisco.model.planOffer.Plan"/>
+  <bpmn2:itemDefinition id="_planToOfferItem" structureRef="com.cisco.model.planOffer.Plan"/>
+  <bpmn2:itemDefinition id="_planIdItem" structureRef="Integer"/>
+  <bpmn2:itemDefinition id="_FB314EE5-E981-4D5A-9933-FA320C81DDA3_InMessageType" structureRef=""/>
+  <bpmn2:itemDefinition id="_FB314EE5-E981-4D5A-9933-FA320C81DDA3_OutMessageType" structureRef=""/>
+  <bpmn2:itemDefinition id="__FB314EE5-E981-4D5A-9933-FA320C81DDA3_planIdInputXItem" structureRef="Integer"/>
+  <bpmn2:itemDefinition id="__FB314EE5-E981-4D5A-9933-FA320C81DDA3_currentPlanOutputXItem" structureRef="com.cisco.model.planOffer.Plan"/>
+  <bpmn2:itemDefinition id="_D64A6EAE-6EBA-4DBF-9544-3E7A0127026C_InMessageType" structureRef=""/>
+  <bpmn2:itemDefinition id="_D64A6EAE-6EBA-4DBF-9544-3E7A0127026C_OutMessageType" structureRef=""/>
+  <bpmn2:itemDefinition id="__D64A6EAE-6EBA-4DBF-9544-3E7A0127026C_currentPlanInputXItem" structureRef="com.cisco.model.planOffer.Plan"/>
+  <bpmn2:itemDefinition id="__D64A6EAE-6EBA-4DBF-9544-3E7A0127026C_subscriberDataInputXItem" structureRef="com.cisco.model.planOffer.SubscriberData"/>
+  <bpmn2:itemDefinition id="__D64A6EAE-6EBA-4DBF-9544-3E7A0127026C_planToOfferOutputXItem" structureRef="com.cisco.model.planOffer.Plan"/>
+  <bpmn2:itemDefinition id="_9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0_InMessageType" structureRef=""/>
+  <bpmn2:itemDefinition id="_9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0_OutMessageType" structureRef=""/>
+  <bpmn2:itemDefinition id="__9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0_subscriberDataInputXItem" structureRef="com.cisco.model.planOffer.SubscriberData"/>
+  <bpmn2:itemDefinition id="__9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0_planIdOutputXItem" structureRef="Integer"/>
+  <bpmn2:message id="_FB314EE5-E981-4D5A-9933-FA320C81DDA3_InMessage" itemRef="_FB314EE5-E981-4D5A-9933-FA320C81DDA3_InMessageType"/>
+  <bpmn2:message id="_FB314EE5-E981-4D5A-9933-FA320C81DDA3_OutMessage" itemRef="_FB314EE5-E981-4D5A-9933-FA320C81DDA3_OutMessageType"/>
+  <bpmn2:interface id="_FB314EE5-E981-4D5A-9933-FA320C81DDA3_ServiceInterface" name="com.cisco.service.planOffer.PlanService" implementationRef="com.cisco.service.planOffer.PlanService">
+    <bpmn2:operation id="_FB314EE5-E981-4D5A-9933-FA320C81DDA3_ServiceOperation" name="getPlan" implementationRef="getPlan">
+      <bpmn2:inMessageRef>_FB314EE5-E981-4D5A-9933-FA320C81DDA3_InMessage</bpmn2:inMessageRef>
+      <bpmn2:outMessageRef>_FB314EE5-E981-4D5A-9933-FA320C81DDA3_OutMessage</bpmn2:outMessageRef>
+    </bpmn2:operation>
+  </bpmn2:interface>
+  <bpmn2:message id="_D64A6EAE-6EBA-4DBF-9544-3E7A0127026C_InMessage" itemRef="_D64A6EAE-6EBA-4DBF-9544-3E7A0127026C_InMessageType"/>
+  <bpmn2:message id="_D64A6EAE-6EBA-4DBF-9544-3E7A0127026C_OutMessage" itemRef="_D64A6EAE-6EBA-4DBF-9544-3E7A0127026C_OutMessageType"/>
+  <bpmn2:interface id="_D64A6EAE-6EBA-4DBF-9544-3E7A0127026C_ServiceInterface" name="com.cisco.service.planOffer.PlanService" implementationRef="com.cisco.service.planOffer.PlanService">
+    <bpmn2:operation id="_D64A6EAE-6EBA-4DBF-9544-3E7A0127026C_ServiceOperation" name="getBestPlanToOffer" implementationRef="getBestPlanToOffer">
+      <bpmn2:inMessageRef>_D64A6EAE-6EBA-4DBF-9544-3E7A0127026C_InMessage</bpmn2:inMessageRef>
+      <bpmn2:outMessageRef>_D64A6EAE-6EBA-4DBF-9544-3E7A0127026C_OutMessage</bpmn2:outMessageRef>
+    </bpmn2:operation>
+  </bpmn2:interface>
+  <bpmn2:message id="_9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0_InMessage" itemRef="_9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0_InMessageType"/>
+  <bpmn2:message id="_9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0_OutMessage" itemRef="_9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0_OutMessageType"/>
+  <bpmn2:interface id="_9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0_ServiceInterface" name="com.cisco.service.planOffer.PlanService" implementationRef="com.cisco.service.planOffer.PlanService">
+    <bpmn2:operation id="_9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0_ServiceOperation" name="getPlanId" implementationRef="getPlanId">
+      <bpmn2:inMessageRef>_9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0_InMessage</bpmn2:inMessageRef>
+      <bpmn2:outMessageRef>_9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0_OutMessage</bpmn2:outMessageRef>
+    </bpmn2:operation>
+  </bpmn2:interface>
+  <bpmn2:collaboration id="_07036197-E8D1-45F8-86E8-D6BAA966193E" name="Default Collaboration">
+    <bpmn2:participant id="_A41809C9-8FD2-47FE-AE79-E7C705F2DB59" name="Pool Participant" processRef="offerPlan"/>
+  </bpmn2:collaboration>
+  <bpmn2:process id="offerPlan" drools:packageName="com.cisco.planOffer" drools:version="1.0" drools:adHoc="false" name="offerPlan" isExecutable="true" processType="Public">
+    <bpmn2:property id="subscriberData" itemSubjectRef="_subscriberDataItem" name="subscriberData"/>
+    <bpmn2:property id="currentPlan" itemSubjectRef="_currentPlanItem" name="currentPlan"/>
+    <bpmn2:property id="planToOffer" itemSubjectRef="_planToOfferItem" name="planToOffer"/>
+    <bpmn2:property id="planId" itemSubjectRef="_planIdItem" name="planId"/>
+    <bpmn2:sequenceFlow id="_5BF2F7EA-2BC0-4360-B160-3F97A5CCC3C4" sourceRef="_D64A6EAE-6EBA-4DBF-9544-3E7A0127026C" targetRef="_F0821259-902E-4169-812C-4D148A931844"/>
+    <bpmn2:sequenceFlow id="_1F1DFCAF-924E-4448-BA35-425D8DD7D116" sourceRef="_FB314EE5-E981-4D5A-9933-FA320C81DDA3" targetRef="_D64A6EAE-6EBA-4DBF-9544-3E7A0127026C"/>
+    <bpmn2:sequenceFlow id="_55E7F959-027E-46B9-B7FE-29E0AE4EA008" sourceRef="_9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0" targetRef="_FB314EE5-E981-4D5A-9933-FA320C81DDA3"/>
+    <bpmn2:sequenceFlow id="_90B07B4F-1C55-4B03-931A-D1469B130585" sourceRef="_B28F3653-3DA3-4038-9F71-2CAA0981B413" targetRef="_9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0"/>
+    <bpmn2:serviceTask id="_9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0" drools:serviceimplementation="Java" drools:serviceinterface="com.cisco.service.planOffer.PlanService" drools:serviceoperation="getPlanId" name="get Plan Id" implementation="Java" operationRef="_9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0_ServiceOperation">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[get Plan Id]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_90B07B4F-1C55-4B03-931A-D1469B130585</bpmn2:incoming>
+      <bpmn2:outgoing>_55E7F959-027E-46B9-B7FE-29E0AE4EA008</bpmn2:outgoing>
+      <bpmn2:ioSpecification>
+        <bpmn2:dataInput id="_9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0_subscriberDataInputX" drools:dtype="com.cisco.model.planOffer.SubscriberData" itemSubjectRef="__9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0_subscriberDataInputXItem" name="subscriberData"/>
+        <bpmn2:dataOutput id="_9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0_planIdOutputX" drools:dtype="Integer" itemSubjectRef="__9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0_planIdOutputXItem" name="planId"/>
+        <bpmn2:inputSet>
+          <bpmn2:dataInputRefs>_9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0_subscriberDataInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet>
+          <bpmn2:dataOutputRefs>_9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0_planIdOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:sourceRef>subscriberData</bpmn2:sourceRef>
+        <bpmn2:targetRef>_9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0_subscriberDataInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation>
+        <bpmn2:sourceRef>_9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0_planIdOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>planId</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:serviceTask>
+    <bpmn2:endEvent id="_F0821259-902E-4169-812C-4D148A931844">
+      <bpmn2:incoming>_5BF2F7EA-2BC0-4360-B160-3F97A5CCC3C4</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:serviceTask id="_D64A6EAE-6EBA-4DBF-9544-3E7A0127026C" drools:serviceimplementation="Java" drools:serviceinterface="com.cisco.service.planOffer.PlanService" drools:serviceoperation="getBestPlanToOffer" name="Determine best plan to offer" implementation="Java" operationRef="_D64A6EAE-6EBA-4DBF-9544-3E7A0127026C_ServiceOperation">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Determine best plan to offer]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_1F1DFCAF-924E-4448-BA35-425D8DD7D116</bpmn2:incoming>
+      <bpmn2:outgoing>_5BF2F7EA-2BC0-4360-B160-3F97A5CCC3C4</bpmn2:outgoing>
+      <bpmn2:ioSpecification>
+        <bpmn2:dataInput id="_D64A6EAE-6EBA-4DBF-9544-3E7A0127026C_currentPlanInputX" drools:dtype="com.cisco.model.planOffer.Plan" itemSubjectRef="__D64A6EAE-6EBA-4DBF-9544-3E7A0127026C_currentPlanInputXItem" name="currentPlan"/>
+        <bpmn2:dataInput id="_D64A6EAE-6EBA-4DBF-9544-3E7A0127026C_subscriberDataInputX" drools:dtype="com.cisco.model.planOffer.SubscriberData" itemSubjectRef="__D64A6EAE-6EBA-4DBF-9544-3E7A0127026C_subscriberDataInputXItem" name="subscriberData"/>
+        <bpmn2:dataOutput id="_D64A6EAE-6EBA-4DBF-9544-3E7A0127026C_planToOfferOutputX" drools:dtype="com.cisco.model.planOffer.Plan" itemSubjectRef="__D64A6EAE-6EBA-4DBF-9544-3E7A0127026C_planToOfferOutputXItem" name="planToOffer"/>
+        <bpmn2:inputSet>
+          <bpmn2:dataInputRefs>_D64A6EAE-6EBA-4DBF-9544-3E7A0127026C_currentPlanInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_D64A6EAE-6EBA-4DBF-9544-3E7A0127026C_subscriberDataInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet>
+          <bpmn2:dataOutputRefs>_D64A6EAE-6EBA-4DBF-9544-3E7A0127026C_planToOfferOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:sourceRef>currentPlan</bpmn2:sourceRef>
+        <bpmn2:targetRef>_D64A6EAE-6EBA-4DBF-9544-3E7A0127026C_currentPlanInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:sourceRef>subscriberData</bpmn2:sourceRef>
+        <bpmn2:targetRef>_D64A6EAE-6EBA-4DBF-9544-3E7A0127026C_subscriberDataInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation>
+        <bpmn2:sourceRef>_D64A6EAE-6EBA-4DBF-9544-3E7A0127026C_planToOfferOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>planToOffer</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:serviceTask>
+    <bpmn2:serviceTask id="_FB314EE5-E981-4D5A-9933-FA320C81DDA3" drools:serviceimplementation="Java" drools:serviceinterface="com.cisco.service.planOffer.PlanService" drools:serviceoperation="getPlan" name="Get current plan" implementation="Java" operationRef="_FB314EE5-E981-4D5A-9933-FA320C81DDA3_ServiceOperation">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Get current plan]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_55E7F959-027E-46B9-B7FE-29E0AE4EA008</bpmn2:incoming>
+      <bpmn2:outgoing>_1F1DFCAF-924E-4448-BA35-425D8DD7D116</bpmn2:outgoing>
+      <bpmn2:ioSpecification>
+        <bpmn2:dataInput id="_FB314EE5-E981-4D5A-9933-FA320C81DDA3_planIdInputX" drools:dtype="Integer" itemSubjectRef="__FB314EE5-E981-4D5A-9933-FA320C81DDA3_planIdInputXItem" name="planId"/>
+        <bpmn2:dataOutput id="_FB314EE5-E981-4D5A-9933-FA320C81DDA3_currentPlanOutputX" drools:dtype="com.cisco.model.planOffer.Plan" itemSubjectRef="__FB314EE5-E981-4D5A-9933-FA320C81DDA3_currentPlanOutputXItem" name="currentPlan"/>
+        <bpmn2:inputSet>
+          <bpmn2:dataInputRefs>_FB314EE5-E981-4D5A-9933-FA320C81DDA3_planIdInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet>
+          <bpmn2:dataOutputRefs>_FB314EE5-E981-4D5A-9933-FA320C81DDA3_currentPlanOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:sourceRef>planId</bpmn2:sourceRef>
+        <bpmn2:targetRef>_FB314EE5-E981-4D5A-9933-FA320C81DDA3_planIdInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation>
+        <bpmn2:sourceRef>_FB314EE5-E981-4D5A-9933-FA320C81DDA3_currentPlanOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>currentPlan</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:serviceTask>
+    <bpmn2:startEvent id="_B28F3653-3DA3-4038-9F71-2CAA0981B413">
+      <bpmn2:outgoing>_90B07B4F-1C55-4B03-931A-D1469B130585</bpmn2:outgoing>
+    </bpmn2:startEvent>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="offerPlan">
+      <bpmndi:BPMNShape id="shape__B28F3653-3DA3-4038-9F71-2CAA0981B413" bpmnElement="_B28F3653-3DA3-4038-9F71-2CAA0981B413">
+        <dc:Bounds height="56" width="56" x="274" y="174"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__FB314EE5-E981-4D5A-9933-FA320C81DDA3" bpmnElement="_FB314EE5-E981-4D5A-9933-FA320C81DDA3">
+        <dc:Bounds height="102" width="154" x="684" y="151"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__D64A6EAE-6EBA-4DBF-9544-3E7A0127026C" bpmnElement="_D64A6EAE-6EBA-4DBF-9544-3E7A0127026C">
+        <dc:Bounds height="102" width="154" x="906" y="151"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__F0821259-902E-4169-812C-4D148A931844" bpmnElement="_F0821259-902E-4169-812C-4D148A931844">
+        <dc:Bounds height="56" width="56" x="1156" y="174"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0" bpmnElement="_9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0">
+        <dc:Bounds height="102" width="154" x="443" y="151"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge_shape__B28F3653-3DA3-4038-9F71-2CAA0981B413_to_shape__9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0" bpmnElement="_90B07B4F-1C55-4B03-931A-D1469B130585">
+        <di:waypoint x="302" y="202"/>
+        <di:waypoint x="443" y="202"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0_to_shape__FB314EE5-E981-4D5A-9933-FA320C81DDA3" bpmnElement="_55E7F959-027E-46B9-B7FE-29E0AE4EA008">
+        <di:waypoint x="597" y="202"/>
+        <di:waypoint x="761" y="202"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__FB314EE5-E981-4D5A-9933-FA320C81DDA3_to_shape__D64A6EAE-6EBA-4DBF-9544-3E7A0127026C" bpmnElement="_1F1DFCAF-924E-4448-BA35-425D8DD7D116">
+        <di:waypoint x="761" y="202"/>
+        <di:waypoint x="906" y="202"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__D64A6EAE-6EBA-4DBF-9544-3E7A0127026C_to_shape__F0821259-902E-4169-812C-4D148A931844" bpmnElement="_5BF2F7EA-2BC0-4360-B160-3F97A5CCC3C4">
+        <di:waypoint x="983" y="202"/>
+        <di:waypoint x="1184" y="202"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmn2:relationship type="BPSimData">
+    <bpmn2:extensionElements>
+      <bpsim:BPSimData>
+        <bpsim:Scenario id="default" name="Simulationscenario">
+          <bpsim:ScenarioParameters/>
+          <bpsim:ElementParameters elementRef="_B28F3653-3DA3-4038-9F71-2CAA0981B413">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="_FB314EE5-E981-4D5A-9933-FA320C81DDA3">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters>
+              <bpsim:Availability>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters>
+              <bpsim:UnitCost>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="_D64A6EAE-6EBA-4DBF-9544-3E7A0127026C">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters>
+              <bpsim:Availability>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters>
+              <bpsim:UnitCost>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="_9DC84DCA-9F8E-4E6F-AA62-CA0D3A52BBA0">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters>
+              <bpsim:Availability>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters>
+              <bpsim:UnitCost>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+        </bpsim:Scenario>
+      </bpsim:BPSimData>
+    </bpmn2:extensionElements>
+    <bpmn2:source>_kuW70Di3ED2Wk_7Rk8CoDQ</bpmn2:source>
+    <bpmn2:target>_kuW70Di3ED2Wk_7Rk8CoDQ</bpmn2:target>
+  </bpmn2:relationship>
+</bpmn2:definitions>
